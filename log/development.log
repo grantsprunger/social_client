@@ -1,0 +1,371 @@
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-09-26 14:17:33 -0600
+Connecting to database specified by database.yml
+Served asset /rails.png - 200 OK (5ms)
+
+
+Started GET "/rails/info/properties" for 127.0.0.1 at 2012-09-26 14:21:40 -0600
+Processing by Rails::InfoController#properties as */*
+  Rendered inline template (3.4ms)
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/properties" for 127.0.0.1 at 2012-09-26 14:27:25 -0600
+Processing by Rails::InfoController#properties as */*
+  Rendered inline template (0.3ms)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/properties" for 127.0.0.1 at 2012-09-26 14:27:28 -0600
+Processing by Rails::InfoController#properties as */*
+  Rendered inline template (0.3ms)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/tweets" for 127.0.0.1 at 2012-09-26 14:44:45 -0600
+Connecting to database specified by database.yml
+Processing by TweetsController#index as HTML
+Completed 500 Internal Server Error in 25ms
+
+ActiveRecord::StatementInvalid (Could not find table 'tweets'):
+  app/controllers/tweets_controller.rb:5:in `index'
+
+
+  Rendered /Users/grant/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/grant/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/grant/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.2ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (1.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTweets (20120926204003)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "tweets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user" varchar(255), "body" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120926204003')
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("tweets")
+
+
+Started GET "/tweets" for 127.0.0.1 at 2012-09-26 14:48:36 -0600
+Processing by TweetsController#index as HTML
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+  Rendered tweets/index.html.erb within layouts/application (23.1ms)
+Compiled scaffolds.css  (81ms)  (pid 19441)
+Compiled tweets.css  (2ms)  (pid 19441)
+Compiled application.css  (161ms)  (pid 19441)
+Compiled jquery.js  (13ms)  (pid 19441)
+Compiled jquery_ujs.js  (0ms)  (pid 19441)
+Compiled tweets.js  (231ms)  (pid 19441)
+Compiled application.js  (400ms)  (pid 19441)
+Completed 200 OK in 987ms (Views: 960.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/tweets.css?body=1" for 127.0.0.1 at 2012-09-26 14:48:37 -0600
+Served asset /tweets.css - 200 OK (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-26 14:48:37 -0600
+Served asset /application.css - 200 OK (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-26 14:48:37 -0600
+Served asset /jquery.js - 200 OK (5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-26 14:48:37 -0600
+Served asset /application.js - 200 OK (9ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-26 14:48:41 -0600
+Connecting to database specified by database.yml
+Served asset /scaffolds.css - 200 OK (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-26 14:48:41 -0600
+Served asset /jquery_ujs.js - 200 OK (4ms)
+
+
+Started GET "/assets/tweets.js?body=1" for 127.0.0.1 at 2012-09-26 14:48:41 -0600
+Served asset /tweets.js - 200 OK (2ms)
+
+
+Started GET "/tweets/new" for 127.0.0.1 at 2012-09-26 14:48:49 -0600
+Processing by TweetsController#new as HTML
+  Rendered tweets/_form.html.erb (26.7ms)
+  Rendered tweets/new.html.erb within layouts/application (53.6ms)
+Completed 200 OK in 233ms (Views: 175.7ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/tweets" for 127.0.0.1 at 2012-09-26 14:49:03 -0600
+Processing by TweetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gHYYn6NiaS2T1xfpqiHWuJ0Kuzw0tSRPPxEBtyfVY5c=", "tweet"=>{"user"=>"grant", "body"=>"Grant is neat"}, "commit"=>"Create Tweet"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (11.9ms)[0m  INSERT INTO "tweets" ("body", "created_at", "updated_at", "user") VALUES (?, ?, ?, ?)  [["body", "Grant is neat"], ["created_at", Wed, 26 Sep 2012 20:49:03 UTC +00:00], ["updated_at", Wed, 26 Sep 2012 20:49:03 UTC +00:00], ["user", "grant"]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://social-client.dev/tweets/1
+Completed 302 Found in 19ms (ActiveRecord: 13.9ms)
+
+
+Started GET "/tweets/1" for 127.0.0.1 at 2012-09-26 14:49:03 -0600
+Processing by TweetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTweet Load (0.3ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered tweets/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 12ms (Views: 8.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tweets" for 127.0.0.1 at 2012-09-26 14:49:07 -0600
+Processing by TweetsController#index as HTML
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+  Rendered tweets/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tweets/1/edit" for 127.0.0.1 at 2012-09-26 15:02:55 -0600
+Processing by TweetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTweet Load (0.1ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered tweets/_form.html.erb (2.0ms)
+  Rendered tweets/edit.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-26 15:02:55 -0600
+
+
+Started GET "/assets/tweets.css?body=1" for 127.0.0.1 at 2012-09-26 15:02:55 -0600
+Served asset /tweets.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-26 15:02:55 -0600
+Served asset /application.css - 304 Not Modified (7ms)
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-26 15:02:55 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-26 15:02:55 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tweets.js?body=1" for 127.0.0.1 at 2012-09-26 15:02:55 -0600
+Served asset /tweets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-26 15:02:55 -0600
+Served asset /application.js - 304 Not Modified (10ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/tweets" for 127.0.0.1 at 2012-09-26 15:15:25 -0600
+Processing by TweetsController#index as HTML
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT "tweets".* FROM "tweets" [0m
+  Rendered tweets/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-26 15:15:25 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-26 15:15:25 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tweets.js?body=1" for 127.0.0.1 at 2012-09-26 15:15:25 -0600
+
+
+Started GET "/assets/tweets.css?body=1" for 127.0.0.1 at 2012-09-26 15:15:25 -0600
+Served asset /tweets.js - 304 Not Modified (0ms)
+Served asset /tweets.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-26 15:15:25 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-26 15:15:25 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-26 15:15:25 -0600
+Served asset /jquery.js - 304 Not Modified (2ms)
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/tweets/new" for 127.0.0.1 at 2012-09-26 15:21:03 -0600
+Processing by TweetsController#new as HTML
+  Rendered tweets/_form.html.erb (1.7ms)
+  Rendered tweets/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-26 15:21:03 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-26 15:21:03 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tweets.css?body=1" for 127.0.0.1 at 2012-09-26 15:21:03 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-26 15:21:03 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+Served asset /tweets.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-26 15:21:03 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tweets.js?body=1" for 127.0.0.1 at 2012-09-26 15:21:03 -0600
+Served asset /tweets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-26 15:21:03 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/tweets" for 127.0.0.1 at 2012-09-26 15:21:16 -0600
+Processing by TweetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gHYYn6NiaS2T1xfpqiHWuJ0Kuzw0tSRPPxEBtyfVY5c=", "tweet"=>{"user"=>"grant", "body"=>"Sweet"}, "commit"=>"Create Tweet"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "tweets" ("body", "created_at", "updated_at", "user") VALUES (?, ?, ?, ?)[0m  [["body", "Sweet"], ["created_at", Wed, 26 Sep 2012 21:21:16 UTC +00:00], ["updated_at", Wed, 26 Sep 2012 21:21:16 UTC +00:00], ["user", "grant"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Redirected to http://social-client.dev/tweets/2
+Completed 302 Found in 4ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/tweets/2" for 127.0.0.1 at 2012-09-26 15:21:16 -0600
+Processing by TweetsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTweet Load (0.1ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered tweets/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-26 15:21:16 -0600
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-26 15:21:16 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tweets.js?body=1" for 127.0.0.1 at 2012-09-26 15:21:16 -0600
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+Served asset /tweets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tweets.css?body=1" for 127.0.0.1 at 2012-09-26 15:21:16 -0600
+Served asset /tweets.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-26 15:21:16 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-26 15:21:16 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-26 15:21:16 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+  [1m[36m (2.3ms)[0m  [1mSELECT version FROM schema_migrations ORDER BY version[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (0.7ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to Tweets (20120926223401)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to Tweets (20120926223401)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "tweets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "users_id" integer, "status" varchar(255)) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120926223401')[0m
+  [1m[35m (1.9ms)[0m  commit transaction
+Migrating to Users (20120926223406)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "id_string" varchar(255) NOT NULL, "name" varchar(255) NOT NULL, "screen_name" varchar(255) NOT NULL, "location" varchar(255), "url" varchar(255), "description" varchar(255), "protected" boolean) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120926223406')[0m
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.5ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("tweets")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("users")
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (9.9ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (17.8ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36m (1.4ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to Tweets (20120926223401)
+  [1m[35m (12.6ms)[0m  CREATE TABLE `tweets` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `users_id` int(11), `status` varchar(255)) ENGINE=InnoDB
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20120926223401')[0m
+Migrating to Users (20120926223406)
+  [1m[35m (9.3ms)[0m  CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `id_string` varchar(255) NOT NULL, `name` varchar(255) NOT NULL, `screen_name` varchar(255) NOT NULL, `location` varchar(255), `url` varchar(255), `description` varchar(255), `protected` tinyint(1), `tweets_id` int(11)) ENGINE=InnoDB
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20120926223406')[0m
+  [1m[35m (0.3ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+  [1m[36m (1.4ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to Tweets (20120926223401)
+Migrating to Users (20120926223406)
+  [1m[35m (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+  [1m[36m (18.0ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (25.7ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36m (1.8ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to Tweets (20120926223401)
+  [1m[35m (10.1ms)[0m  CREATE TABLE `tweets` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `users_id` int(11), `status` varchar(140)) ENGINE=InnoDB
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20120926223401')[0m
+Migrating to Users (20120926223406)
+  [1m[35m (9.8ms)[0m  CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `id_string` varchar(255) NOT NULL, `name` varchar(255) NOT NULL, `screen_name` varchar(255) NOT NULL, `location` varchar(255), `url` varchar(255), `description` varchar(255), `protected` tinyint(1), `tweets_id` int(11)) ENGINE=InnoDB
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20120926223406')[0m
+  [1m[35m (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+  [1m[36m (10.1ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (24.6ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36m (1.6ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to Tweets (20120926223401)
+  [1m[35m (11.9ms)[0m  CREATE TABLE `tweets` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `users_id` int(11), `status` varchar(140)) ENGINE=InnoDB
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20120926223401')[0m
+Migrating to Users (20120926223406)
+  [1m[35m (8.7ms)[0m  CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `id_string` varchar(255) NOT NULL, `name` varchar(255) NOT NULL, `screen_name` varchar(255) NOT NULL, `location` varchar(255), `url` varchar(255), `description` varchar(255), `protected` tinyint(1)) ENGINE=InnoDB
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20120926223406')[0m
+  [1m[35m (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-10-03 14:36:03 -0600
+Connecting to database specified by database.yml
+Served asset /rails.png - 200 OK (2ms)
